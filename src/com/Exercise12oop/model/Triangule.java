@@ -4,8 +4,15 @@ import java.lang.Math;
 
 public class Triangule extends Shape{
 	
+	//Characteristics
+	
 	private double base;
 	private double height;
+	public double area;
+	private double perimeter;
+	protected String name;
+	
+	//Constructors
 	
 	public Triangule() 
 	{
@@ -22,6 +29,13 @@ public class Triangule extends Shape{
 	public double CalculateArea(double base, double height)
 	{
 		return (base*height)/2;
+	}
+	
+	public double CalculatePerimeter()
+	{
+		this.perimeter = Math.sqrt(Math.pow(this.base,2)+Math.pow(this.height, 2));
+		this.name="Default";
+		return 0;
 	}
 	
 	public double CalculatePerimeter(double base, double height)
